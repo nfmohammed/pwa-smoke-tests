@@ -1,0 +1,11 @@
+{
+  "name": "end2end",
+  "version": "1.0.0",
+  "description": "Browser testing framework using puppeteer",
+  "main": "index.js",
+  "author": "nmohammed",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
