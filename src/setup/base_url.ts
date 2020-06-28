@@ -1,8 +1,8 @@
-const { brandResolver } = require("./brand");
-const environment = require("./environment");
+import { brandResolver, Brand } from './brand';
+import { environment } from "./environment";
 
-const baseUrl = (brandIndex) => {
-    let brandProdURL = brandResolver(brandIndex);
+export const baseUrl = (brand?: Brand): string => {
+    let brandProdURL = brandResolver(brand);
     let dotlessBrand = brandProdURL.split(".").join("");
     let url='';
     if (environment === "sandbox") {
@@ -16,5 +16,3 @@ const baseUrl = (brandIndex) => {
     }
     return url;
 }
-
-module.exports = baseUrl;

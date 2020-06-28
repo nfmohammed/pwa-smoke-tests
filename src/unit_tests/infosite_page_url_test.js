@@ -1,5 +1,5 @@
-const { brand } = require("../../setup/brand");
-const infositePageUrl = require("../../setup/infosite_page_url");
+const { brand } = require("../setup/brand");
+const infositePageUrl = require("../setup/infosite_page_url");
 
 const searchParams = {
     propertyId: 20303,

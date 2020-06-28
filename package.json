@@ -6,6 +6,12 @@
   "author": "nmohammed",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^14.0.14",
+    "dotenv": "^8.2.0",
+    "typescript": "^3.9.5"
+  },
+  "scripts": {
+    "test": "tsc"
   }
 }

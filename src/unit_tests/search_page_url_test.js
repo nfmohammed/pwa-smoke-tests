@@ -1,5 +1,5 @@
-const { brand } = require("../../setup/brand");
-const searchPageUrl = require("../../setup/search_page_url");
+const { brand } = require("../setup/brand");
+const searchPageUrl = require("../setup/search_page_url");
 
 const searchParams = {
     brand: brand.ebookers,
