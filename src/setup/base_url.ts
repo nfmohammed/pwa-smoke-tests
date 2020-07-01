@@ -1,8 +1,8 @@
 import { brandResolver, Brand } from './brand';
 import { environment } from "./environment";
 
-export const baseUrl = (brand?: Brand): string => {
-    let brandProdURL = brandResolver(brand);
+export const baseUrl = (brandIndex?: Brand): string => {
+    let brandProdURL = brandResolver(brandIndex);
     let dotlessBrand = brandProdURL.split(".").join("");
     let url='';
     if (environment === "sandbox") {

@@ -1,19 +1,12 @@
-import * as dotenv from "dotenv";
-dotenv.config();
+import { ENVIRONMENT } from './config'
 
-enum Environment {
-    SANDBOX = "sandbox", 
-    CANARY = "canary", 
-    INTEGRATOIN = "integration", 
-    TRUNK = "trunk",
-    PRODUCTION = "production"
-}
+const environments = [ "sandbox", "canary", "integration", "trunk","production" ]; 
 
 //Environment is defined only using node param. 
 //Individual test will not have ability to override environment.
 const evaluateEnvironment = () => {
-    if(process.env.ENVIRONMENT && Environment[process.env.ENVIRONMENT]) {
-        return Environment[process.env.ENVIRONMENT]
+    if(ENVIRONMENT && environments.includes(ENVIRONMENT)) {
+        return ENVIRONMENT
     } else {
         throw new Error (`Either ENVIRONMENT is incorrect or not specified`);
     }

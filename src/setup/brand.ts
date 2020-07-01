@@ -1,30 +1,37 @@
-import * as dotenv from "dotenv";
-dotenv.config();
+import { BRAND as ENV_BRAND} from './config';
 
 export enum Brand {
-    EXPEDIA,
-    EXPEDIAIE,
-    ORBITZ,
-    EBOOKERS,
-    CHEAPTICKETS,
-    WOTIF
+    expedia,
+    expediaie,
+    orbitz,
+    ebookers,
+    cheaptickets,
+    wotif
 }
 
+// const BrandURL = ["expedia.com", "expedia.ie", "orbitz.com", "ebookers.com", "cheaptickets.com", "wotif.com"]; 
 enum BrandURL {
-    EXPEDIA = "expedia.com",
-    EXPEDIAIE = "expedia.ie",
-    ORBITZ = "orbitz.com",
-    EBOOKERS = "ebookers.com",
-    CHEAPTICKETS = "cheaptickets.com",
-    WOTIF = "wotif.com"
+    expedia = "expedia.com",
+    expediaie = "expedia.ie",
+    orbitz = "orbitz.com",
+    ebookers = "ebookers.com",
+    cheaptickets = "cheaptickets.com",
+    wotif = "wotif.com"
 }
 
 
 // Brand will be specified using node param. 
 // A test can override the brand by providing brand name.
-export const brandResolver = (inputBrand: Brand) => {
+export const brandResolver = (brandIndex?: Brand) => {
     
-    let brand = inputBrand || process.env.BRAND;
+    let brand;
+    if (brandIndex) {
+        console.log(`Using brand value from test, Brand = ${Brand[brandIndex]}`);
+        brand = Brand[brandIndex];
+    } else if (ENV_BRAND) {
+        console.log(`Using brand value from environment. Brand = ${ENV_BRAND}`);
+        brand = ENV_BRAND;
+    }
     if(brand && BrandURL[brand]) {
         return BrandURL[brand];
     } else {

@@ -12,6 +12,6 @@
     "typescript": "^3.9.5"
   },
   "scripts": {
-    "test": "tsc"
+    "test": "tsc && node dist/unit_tests/search_page_url_test"
   }
 }
