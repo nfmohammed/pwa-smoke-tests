@@ -2,9 +2,7 @@
 
 Commands
 
-    $ node src/tests/base_url_test.js
-    $ ENVIRONMENT=integration node src/tests/base_url_test.js
-    $ ENVIRONMENT=integration BRAND=orbitz node src/tests/base_url_test.js
+    $ yarn install
+    $ npm run test
 
-    $ node src/tests/infosite_page_url_test.js
-    $ node src/tests/search_page_url_test.js
+    $ node dist/unit_tests/base_url_test.js --brand=orbitz --environment=integration --screenSize=large

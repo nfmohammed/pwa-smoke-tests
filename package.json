@@ -6,12 +6,20 @@
   "author": "nmohammed",
   "license": "MIT",
   "dependencies": {
+    "@types/chai": "^4.2.11",
     "@types/dotenv": "^8.2.0",
+    "@types/mocha": "^8.0.0",
     "@types/node": "^14.0.14",
+    "@types/yargs": "^15.0.5",
+    "chai": "^4.2.0",
     "dotenv": "^8.2.0",
-    "typescript": "^3.9.5"
+    "mocha": "^8.0.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5",
+    "yargs": "^15.4.1"
   },
   "scripts": {
-    "test": "tsc && node dist/unit_tests/search_page_url_test"
+    "help": "tsc && node dist/setup/index.js --help",
+    "test": "mocha -r ts-node/register src/test/**/*.ts"
   }
 }

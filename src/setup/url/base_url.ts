@@ -1,8 +1,8 @@
-import { brandResolver, Brand } from './brand';
-import { environment } from "./environment";
+import { brandURL, Brand } from '../config/brand';
+import { environment } from "../config/environment";
 
 export const baseUrl = (brandIndex?: Brand): string => {
-    let brandProdURL = brandResolver(brandIndex);
+    let brandProdURL = brandURL(brandIndex);
     let dotlessBrand = brandProdURL.split(".").join("");
     let url='';
     if (environment === "sandbox") {
