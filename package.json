@@ -22,7 +22,7 @@
   },
   "scripts": {
     "help": "tsc && node dist/setup/index.js --help",
-    "uitests": "mocha -r ts-node/register src/test/ui_tests/**/*.ts",
-    "unittests": "mocha -r ts-node/register src/test/unit_tests/**/*.ts"
+    "ui-test": "mocha -r ts-node/register src/test/ui/**/*.ts",
+    "unit-test": "mocha -r ts-node/register src/test/unit/**/*.ts"
   }
 }

@@ -3,10 +3,10 @@
 Commands
 
     $ yarn install
-    $ yarn run unittests
-    $ yarn run uitests
-    $ mocha -r ts-node/register src/test/unit_tests/base_url_test.ts
-    $ mocha -r ts-node/register src/test/unit_tests/base_url_test.ts --environment=integration
+    $ yarn run unit-test
+    $ yarn run ui-test
+    $ mocha -r ts-node/register src/test/unit/base_url_test.ts
+    $ mocha -r ts-node/register src/test/unit/base_url_test.ts --environment=integration
 
 
 Tagging
