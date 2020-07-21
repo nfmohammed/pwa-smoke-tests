@@ -3,9 +3,10 @@
 Commands
 
     $ yarn install
-    $ npm run test
-
-    $ node dist/unit_tests/base_url_test.js --brand=orbitz --environment=integration --screenSize=large
+    $ yarn run unittests
+    $ yarn run uitests
+    $ mocha -r ts-node/register src/test/unit_tests/base_url_test.ts
+    $ mocha -r ts-node/register src/test/unit_tests/base_url_test.ts --environment=integration
 
 
 Tagging
