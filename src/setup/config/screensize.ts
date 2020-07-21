@@ -3,7 +3,7 @@ import yargs from 'yargs';
 export type ScreenSize = 'extraLarge' | 'large' | 'medium' | 'small';
 const screenSizes: readonly ScreenSize[] = ['extraLarge' , 'large' , 'medium' , 'small'];
 
-const argv = yargs.option('screenSize', {
+const argv = yargs.option('screensize', {
     choices: screenSizes,
     default: 'medium'
   }).argv;
@@ -27,4 +27,4 @@ const screenSizeValues = {
     }
 }
 
-export const screenSize = screenSizeValues[argv.screenSize];
+export const screenSize = screenSizeValues[argv.screensize];

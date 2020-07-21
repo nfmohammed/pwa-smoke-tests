@@ -23,6 +23,6 @@
   "scripts": {
     "help": "tsc && node dist/setup/index.js --help",
     "uitests": "mocha -r ts-node/register src/test/ui_tests/**/*.ts",
-    "unitests": "mocha -r ts-node/register src/test/unit_tests/**/*.ts"
+    "unittests": "mocha -r ts-node/register src/test/unit_tests/**/*.ts"
   }
 }
