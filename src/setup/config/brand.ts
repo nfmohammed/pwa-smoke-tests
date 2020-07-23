@@ -8,13 +8,13 @@ const argv = yargs.option('brand', {
 }).argv;
 
 // const BrandURL = ["expedia.com", "expedia.ie", "orbitz.com", "ebookers.com", "cheaptickets.com", "wotif.com"]; 
-enum BrandURL {
-    expedia = "expedia.com",
-    expediaie = "expedia.ie",
-    orbitz = "orbitz.com",
-    ebookers = "ebookers.com",
-    cheaptickets = "cheaptickets.com",
-    wotif = "wotif.com"
+const BrandURL = {
+    expedia: "expedia.com",
+    expediaie: "expedia.ie",
+    orbitz: "orbitz.com",
+    ebookers: "ebookers.com",
+    cheaptickets: "cheaptickets.com",
+    wotif: "wotif.com"
 }
 
 
